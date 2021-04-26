@@ -7,19 +7,32 @@ var parolaInserita= prompt("Dimmi una parola");
 var parolaUtente = parolaInserita.toLowerCase();
 
 
-// console.log(parolaUtente);
+//ESECUZIONE FUNZIONE
+var parolaGirata = rovesciaParola(parolaUtente);
+console.log(parolaGirata);
 
 
-
-var parolaInversa;
-
-
- for(i=0; i<parolaUtente.length; i++{
-
- var carattere = parolaUtente[i];
- parolaInversa += carattere;
- 
-
+if (parolaGirata == parolaUtente){
+  alert ("La parola E' palindroma");
+}
+else{
+alert ('La parola NON è palindroma');
 }
 
-console.log(parolaInversa);
+
+
+
+
+
+
+
+
+//FUNZIONE
+function rovesciaParola(parola){
+  var parolaReverse = '';
+
+  for (var i = parola.length - 1; i >=0; i--){
+    parolaReverse += parola [i];
+  }
+  return parolaReverse;
+}
